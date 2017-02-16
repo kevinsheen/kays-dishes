@@ -83,7 +83,7 @@
 <div class="container-fluid bg-grey">
   <div class="row">
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+      <span class="glyphicon glyphicon-film logo slideanim"></span>
     </div>
     <div class="col-sm-8">
       <h2>Video Section</h2><br>
@@ -95,7 +95,7 @@
 <!-- Container (Services Section) -->
 <div id="services" class="container-fluid text-center">
   <h2>Products</h2>
-  <h4>Our Current Selection</h4>
+  <h4>Our Current Selection of Dishware</h4>
   <br>
   <div class="row slideanim">
     <div class="col-sm-4">
@@ -141,23 +141,23 @@
   <div class="row text-center slideanim">
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="paris.jpg" alt="Paris" width="400" height="300">
-        <p><strong>Paris</strong></p>
-        <p>Yes, we built Paris</p>
+        <img src="" alt="Plates" width="400" height="300">
+        <p><strong>Plates</strong></p>
+        <p>Plates for Sale!</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="newyork.jpg" alt="New York" width="400" height="300">
-        <p><strong>New York</strong></p>
-        <p>We built New York</p>
+        <img src="" alt="Wall Sconces" width="400" height="300">
+        <p><strong>Wall Sconces</strong></p>
+        <p>We make them!</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
-        <p><strong>San Francisco</strong></p>
-        <p>Yes, San Fran is ours</p>
+        <img src="" alt="Magnets" width="400" height="300">
+        <p><strong>Magnets</strong></p>
+        <p>Oh yes we do.</p>
       </div>
     </div>
   </div><br>
@@ -202,9 +202,8 @@
   <div class="row">
     <div class="col-sm-5">
       <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Seattle, WA || US</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> kaysdishes.wa@gmail.com</p>
     </div>
     <div class="col-sm-7 slideanim">
       <div class="row">
@@ -226,14 +225,23 @@
 </div>
 
 <!-- Add Google Maps -->
-<div id="googleMap" style="height:400px;width:100%;"></div>
+<div id="googleMap" style="height:360px;width:100%;"></div>
 <script>
 function myMap() {
-var myCenter = new google.maps.LatLng(41.878114, -87.629798);
-var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+var myCenter = new google.maps.LatLng(47.6097271, -122.3465704);
+var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:true, mapTypeId:google.maps.MapTypeId.ROADMAP};
 var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 var marker = new google.maps.Marker({position:myCenter});
 marker.setMap(map);
+
+var infowindow = new google.maps.InfoWindow({
+  content:"Welcome to Seattle!"
+  });
+
+google.maps.event.addListener(marker, 'click', function() {
+  infowindow.open(map,marker);
+  });
+
 }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-EXZ24bhAoDT-9QePGbF8CB3hGqX85kw&callback=myMap"></script>
