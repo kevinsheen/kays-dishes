@@ -197,7 +197,7 @@
 </div>
 
 <!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
+<div id="contact" class="container-fluid">
   <h2 class="text-center">CONTACT</h2>
   <div class="row">
     <div class="col-sm-5">
@@ -254,6 +254,7 @@ Get a free API key from Google.
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
   <p>Thanks for visiting!</p>
+  <p>Kay's Dishes 2017</p>
 </footer>
 
 
